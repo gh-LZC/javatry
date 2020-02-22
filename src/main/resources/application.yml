@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: boot
+server:
+  servlet:
+    context-path: /boot

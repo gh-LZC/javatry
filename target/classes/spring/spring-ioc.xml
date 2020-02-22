@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+<!--    <bean class="com.frame.spring.aop.JavaConfig"/>-->
+    <bean id="xmlIoc" class="com.frame.spring.aop.XmlIoc" >
+<!--        <constructor-arg ref="javaConfigBean"/>-->
+        <property name="xmlBean" ref="xmlBean"/>
+<!--        <property name="javaConfigBean" ref="javaConfigBean"/>-->
+    </bean>
+    <bean id="xmlBean" class="com.frame.spring.aop.XmlBean">
+        <constructor-arg>
+            <value>目录</value>
+        </constructor-arg>
+        <constructor-arg>
+            <value>鲁迅</value>
+        </constructor-arg>
+        <constructor-arg ref="bean"/>
+        <!--        <property name="title" value="标题"/>-->
+        <property name="works">
+            <list>
+                <value>小鸡</value>
+                <value>小鸭</value>
+            </list>
+        </property>
+        <property name="goods" ref="goods"/>
+    </bean>
+    <util:list id="goods">
+        <value>小狗</value>
+        <value>小牛</value>
+    </util:list>
+    <bean id="bean" class="com.frame.spring.aop.Bean">
+        <property name="id" value="1"/>
+    </bean>
+
+    <!--默认id为frame.spring.aop.Bean#0-->
+    <bean class="com.frame.spring.aop.Bean" c:name="com.frame.spring.aop.Bean#0" p:id="88" p:name="Bean#0">
+
+    </bean>
+
+    <!--默认id为frame.spring.aop.Bean#1-->
+    <bean class="com.frame.spring.aop.Bean" c:name="com.frame.spring.aop.Bean#1"/>
+</beans>
