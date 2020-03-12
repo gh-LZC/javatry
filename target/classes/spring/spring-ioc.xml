@@ -8,13 +8,13 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util.xsd">
-<!--    <bean class="com.frame.spring.aop.JavaConfig"/>-->
-    <bean id="xmlIoc" class="com.frame.spring.aop.XmlIoc" >
+<!--    <bean class="com.frame.spring.ioc.JavaConfig"/>-->
+    <bean id="xmlIoc" class="com.frame.spring.ioc.XmlIoc" >
 <!--        <constructor-arg ref="javaConfigBean"/>-->
         <property name="xmlBean" ref="xmlBean"/>
 <!--        <property name="javaConfigBean" ref="javaConfigBean"/>-->
     </bean>
-    <bean id="xmlBean" class="com.frame.spring.aop.XmlBean">
+    <bean id="xmlBean" class="com.frame.spring.ioc.XmlBean">
         <constructor-arg>
             <value>目录</value>
         </constructor-arg>
@@ -35,15 +35,15 @@
         <value>小狗</value>
         <value>小牛</value>
     </util:list>
-    <bean id="bean" class="com.frame.spring.aop.Bean">
+    <bean id="bean" class="com.frame.spring.ioc.Bean">
         <property name="id" value="1"/>
     </bean>
 
-    <!--默认id为frame.spring.aop.Bean#0-->
-    <bean class="com.frame.spring.aop.Bean" c:name="com.frame.spring.aop.Bean#0" p:id="88" p:name="Bean#0">
+    <!--默认id为frame.spring.ioc.Bean#0-->
+    <bean class="com.frame.spring.ioc.Bean" c:name="com.frame.spring.ioc.Bean#0" p:id="88" p:name="Bean#0">
 
     </bean>
 
-    <!--默认id为frame.spring.aop.Bean#1-->
-    <bean class="com.frame.spring.aop.Bean" c:name="com.frame.spring.aop.Bean#1"/>
+    <!--默认id为frame.spring.ioc.Bean#1-->
+    <bean class="com.frame.spring.ioc.Bean" c:name="com.frame.spring.ioc.Bean#1"/>
 </beans>

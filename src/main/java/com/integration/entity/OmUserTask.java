@@ -11,4 +11,11 @@ public class OmUserTask {
     private int userId;
     private int taskId;
     private int taskStatus;
+
+    public OmUserTask() {
+    }
+
+    public OmUserTask(int userId) {
+        this.userId = userId;
+    }
 }

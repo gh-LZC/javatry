@@ -1,12 +1,12 @@
 package com.frame.spring;
 
-import com.frame.spring.aop.AnnotationConfigIoc;
-import com.frame.spring.aop.Bean;
-import com.frame.spring.aop.JavaConfig;
-import com.frame.spring.aop.JavaConfigBean;
-import com.frame.spring.aop.JavaConfigIoc;
-import com.frame.spring.aop.JavaConfigXmlConfig;
-import com.frame.spring.aop.XmlIoc;
+import com.frame.spring.ioc.AnnotationConfigIoc;
+import com.frame.spring.ioc.Bean;
+import com.frame.spring.ioc.JavaConfig;
+import com.frame.spring.ioc.JavaConfigBean;
+import com.frame.spring.ioc.JavaConfigIoc;
+import com.frame.spring.ioc.JavaConfigXmlConfig;
+import com.frame.spring.ioc.XmlIoc;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -31,7 +31,7 @@ public class Client {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-root.xml");
         XmlIoc xmlIoc = context.getBean(XmlIoc.class);
         JavaConfigBean javaConfigBean = context.getBean(JavaConfigBean.class);
-        Bean bean = (Bean) context.getBean("com.frame.spring.aop.Bean#0");
+        Bean bean = (Bean) context.getBean("com.frame.spring.ioc.Bean#0");
         System.out.println("id:" + (bean.getId()-1) +",name:" + bean.getName());
         xmlIoc.getXmlBean().say();
         javaConfigBean.say();

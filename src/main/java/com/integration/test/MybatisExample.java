@@ -2,6 +2,7 @@ package com.integration.test;
 
 import com.integration.entity.Employee;
 import com.integration.mapper.EmployeeMapper;
+import com.integration.mapper.TaskDefMapper;
 import com.integration.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -17,14 +18,29 @@ public class MybatisExample {
         SqlSession sqlSession = null;
         try {
             sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+            TaskDefMapper taskDefMapper = sqlSession.getMapper(TaskDefMapper.class);
+            System.out.println(taskDefMapper.queryAllTask());
 
+        }catch (Exception e){
+            System.err.println(e.getMessage());
+            e.getStackTrace();
+        }finally {
+            sqlSession.close();
+        }
+
+    }
+
+    public static void testEmployee(){
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
             EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
             System.out.println(employeeMapper.queryEmployeeName());
             Employee employee = new Employee();
-            employee.setEmployeeId(3);
+            /*employee.setEmployeeId(3);
             employee.setEmployeeName("name3");
             employee.setEmployeePhone("33");
-            employee.setEmployeeEmail("email3");
+            employee.setEmployeeEmail("email3");*/
             //System.out.println(employeeMapper.insertEmployee(employee));
             sqlSession.commit();
             System.out.println(employeeMapper.queryAllEmployee());
@@ -37,6 +53,5 @@ public class MybatisExample {
         }finally {
             sqlSession.close();
         }
-
     }
 }

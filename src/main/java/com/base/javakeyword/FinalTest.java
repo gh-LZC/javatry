@@ -6,7 +6,7 @@ package com.base.javakeyword;
  * 3.final初始化途径：在声明处、在构造方法、在块
  *
  */
-public class FinalTest {
+public  class FinalTest {
     final String finalString;
     final int finalInt;
     final char finalChar;
@@ -34,7 +34,6 @@ public class FinalTest {
 
     }
 
-
     /*public FinalTest() {
         //finalMethod();
         this.finalString = "";
@@ -60,3 +59,7 @@ public class FinalTest {
         }
     }
 }
+
+final class FinalC{ }
+//错误：final类不能被继承，不能继承
+//class ClassC extends FinalC{}

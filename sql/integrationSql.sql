@@ -7,6 +7,38 @@ employee_email varchar(50)
 insert into employee select 1,'name1',11,'email1' from dual;
 insert into employee select 2,'name2',22,'email1' from dual;
 update employee  t set employee_email = 'email2' where t.employee_id=2;
-select * from employee;
-select * from employee t where t.employee_id = 1
+bnmselect * from employee t where t.employee_id = 1
 select employee_name from employee t where t.employee_id = 1
+select * from employee
+
+create table task_def(
+task_id number(10) primary key,
+task_name varchar(50),
+task_level number(2),
+task_description varchar(1000)
+);
+insert into task_def select 1,'task1',1,'任务1' from dual;
+insert into task_def select 2,'task2',2,'任务2' from dual;
+select * from task_def;
+delete  task_def;
+create table step_def(
+step_id number(11) primary key,
+step_name varchar(50),
+step_description(1000)
+);
+
+create table task_step_config(
+
+status
+);
+
+create table system_dict_config(
+dict_name varchar(50),
+dict_group varchar(50),
+dict_value varchar(50),
+
+);
+
+select userenv('language') from dual;
+select * from V$NLS_PARAMETERS
+ 

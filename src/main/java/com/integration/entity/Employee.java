@@ -14,10 +14,17 @@ import java.io.Serializable;
  */
 @Data
 @Alias(value = "employee")
+//@Alias(value = "employee")
 public class Employee implements Serializable {
     private long employeeId;
     private String employeeName;
     private String employeePhone;
     private String employeeEmail;
 
+    public Employee() {
+    }
+
+    public Employee(long employeeId) {
+        this.employeeId = employeeId;
+    }
 }
