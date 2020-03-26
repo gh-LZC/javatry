@@ -2,6 +2,7 @@ package com.frame.spring.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -38,5 +39,9 @@ public class LogAspect {
         MethodSignature signature = (MethodSignature)joinPoint.getSignature();
         Method method = signature.getMethod();
         System.out.println("方法规则式拦截,"+method.getName());
+    }
+    @Around("execution(* com.frame.spring.aop..DemoMethodService.*(..))")
+    public void arroud(JoinPoint joinPoint){
+        System.out.println("开始了");
     }
 }

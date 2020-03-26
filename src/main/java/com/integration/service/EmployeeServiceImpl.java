@@ -2,7 +2,6 @@ package com.integration.service;
 
 import com.integration.entity.Employee;
 import com.integration.mapper.EmployeeMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Component;
  */
 @Component("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
-    @Autowired
     EmployeeMapper employeeMapper;
 
     @Override

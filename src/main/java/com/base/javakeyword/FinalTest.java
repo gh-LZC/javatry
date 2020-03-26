@@ -29,9 +29,18 @@ public  class FinalTest {
         this.finalChar = finalChar;
         this.finalBoolean = finalBoolean;
     }
+    //导致报错，少初始化其他final属性
+    /*public FinalTest(String finalString, int finalInt) {
+        this.finalString = finalString;
+        this.finalInt = finalInt;
+
+    }*/
 
     public static void main(String[] args){
-
+        FinalC finalC = new FinalC();
+        finalC = new FinalC();
+        final FinalC finalCc = new FinalC();
+        //finalCc = new FinalC();
     }
 
     /*public FinalTest() {
@@ -52,12 +61,33 @@ public  class FinalTest {
         //finalBoolean = true;
     }
 
+    private final void finalMethod2(){
+
+    }
+
+
     class InnerC extends FinalTest {
+/* 父类final方法不能被重写
+        void finalMethod(){
+
+        }*/
+
+
+        void Method(final String a){
+            //final参数不能被修改
+            //a="b";
+        }
+
+        void finalMethod2(){
+
+        }
 
         public InnerC(String finalString, int finalInt, char finalChar, boolean finalBoolean) {
             super(finalString, finalInt, finalChar, finalBoolean);
         }
     }
+
+
 }
 
 final class FinalC{ }

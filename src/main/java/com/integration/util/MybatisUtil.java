@@ -20,12 +20,12 @@ public class MybatisUtil {
     private volatile static SqlSessionFactory sqlSessionFactory = null;
 
     public static SqlSessionFactory getSqlSessionFactory() {
-        String resource = "mybatis/mybatis-config.xml";
+        String resourceUrl = "D:\\project\\javatry\\src\\main\\resources\\mybatis\\mybatis-config.xml";
         if (sqlSessionFactory == null) {
             try {
                 synchronized (SqlSessionFactory.class) {
                     if (sqlSessionFactory == null) {
-                        sqlSessionFactory = buildSqlSessionFactory(resource);
+                        sqlSessionFactory = buildSqlSessionFactory(resourceUrl);
                     }
                 }
             } catch (IOException e) {
@@ -36,9 +36,9 @@ public class MybatisUtil {
         return sqlSessionFactory;
     }
 
-    private static SqlSessionFactory buildSqlSessionFactory(String resource) throws IOException {
+    private static SqlSessionFactory buildSqlSessionFactory(String resourceUrl) throws IOException {
         InputStream inputStream;
-        inputStream = Resources.getResourceAsStream(resource);
+        inputStream = Resources.getResourceAsStream(resourceUrl);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         inputStream.close();
         return sqlSessionFactory;
