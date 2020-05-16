@@ -13,16 +13,16 @@ public class ParentClass {
     public Object publiceObject;
 
     private void privateMehtod() {
-        System.out.println("privateMehtod");
+        System.out.println("ParentClass privateMehtod");
     }
 
     public void publicMehtod() {
         privateMehtod();
-        System.out.println("publicMehtod");
+        System.out.println("ParentClass publicMehtod");
     }
 
     protected void protectedMehtod() {
-        System.out.println("protectedMehtod");
+        System.out.println("ParentClass protectedMehtod");
     }
 
     class InsertClass{

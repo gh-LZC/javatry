@@ -8,9 +8,11 @@ package com.base.javaSymbol.inherit;
  * @Version 1.0
  */
 public class Main {
-    public static void main(String[] args){
-      ChildClass childClass = new ChildClass();
-      childClass.publicMehtod();
-        System.out.println(Runtime.getRuntime().availableProcessors());
+    public static void main(String[] args) {
+        ParentClass parentClass = new ParentChildClass();
+        parentClass.publicMehtod();
+        ParentChildClass parentChildClass = new ParentChildClass();
+        parentChildClass.publicMehtod();
+
     }
 }

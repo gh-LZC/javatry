@@ -1,5 +1,6 @@
 package com;
 
+import java.io.File;
 import java.util.HashMap;
 
 /**
@@ -11,11 +12,10 @@ import java.util.HashMap;
  */
 public class MyTest {
     public static void main(String[] args){
-        System.out.println(new MyTest().equals(new MyTest()));
-        String a = "a";
-        String b = "b";
-        new HashMap<>().equals(new HashMap<>());
-        a.equals(b);
+        new File("a.txt").renameTo(new File("a.txt"));
+        int i=0;
+        System.out.println(++i);
+        System.out.println(i);
     }
     public void method(String s,String... args){
         for (String s1:args){
