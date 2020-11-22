@@ -7,10 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web4.0" />
-        <module name="javatry" />
-        <module name="service100" />
+        <module name="docGenetor" />
+        <module name="dubbo" />
+        <module name="jar" />
         <module name="eureka" />
+        <module name="service100" />
+        <module name="base" />
+        <module name="web4.0" />
+        <module name="designModelCreater" />
+        <module name="codeGenetor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/maven-ant-tasks-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/oro-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/mysql-connector-java-5.1.14-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/velocity-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/beautyeye_lnf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/antlr-2.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/werken-xpath-0.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/avalon-logkit-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/commons-lang-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/servletapi-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Genetor/lib/commons-io-2.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

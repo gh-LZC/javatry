@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud/eureka/pom.xml" />
         <option value="$PROJECT_DIR$/web4.0/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/jar/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/pom.xml" />
       </list>
     </option>
   </component>
