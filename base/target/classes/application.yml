@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: boot
-server:
-  servlet:
-    context-path: /boot
-my:
-  name: lzc
